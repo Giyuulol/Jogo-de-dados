@@ -1,3 +1,2 @@
-# Projeto-jogo-da-forca
-projeto do jogo da forca em C - Técnicas e desenvolvimento de algoritmos
-teste
+# Jogo-de-dados
+projeto jogo de dados em C - Técnicas e desenvolvimento de algoritmos
