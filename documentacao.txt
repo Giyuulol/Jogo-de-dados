@@ -1,0 +1,53 @@
+PROJETO JOGO DE DADOS
+
+O programa implementa um jogo de dados simples, utilizando funções, ponteiros, alocação dinâmica e objetos. Há dois jogadores, e cada um joga um dado e o maior vence, e cada vitória fica salva na estrutura de dados.
+
+COMPONENTES DO CÓDIGO: 
+
+1. ESTRUTURA JOGADOR:
+    - define a estrutura de jogador, que contém o seu nome de até 49 caracteres e o número de vitórias do tipo inteiro;
+
+2. FUNÇÃO criarJogador:
+    -ENTRADA: utiliza um ponteiro constante para o nome do jogador;
+    -SAÍDA: é um ponteiro para a estrutura Jogador criada dinamicamente com malloc();
+    -DESCRIÇÃO: 
+        - aloca memória dinamicamente para o jogador;
+        - inicializa o nome do jogador e define o número inicial de vitórias para 0;
+        - encerra o programa com exit(1) se ocorrer alguma falha de execução.
+
+3. FUNÇÃO jogarDado:
+    -ENTRADA: nenhuma entrada;
+    -SAÍDA: retorna um número inteiro aleatório entre 1 e 6;
+    -DESCRIÇÃO: simula o lançamento de um dado.
+
+4. FUNÇÃO compararDado:
+    -ENTRADA: ponteiro para dois jogadores e dois números inteiros representando os valores dos dados;
+    -SAÍDA: nenhuma;
+    -DESCRIÇÃO: compara os valores de cada dado e incrementa o campo `vitoria` da estrutura `Jogador` e exibe o resultado no console.
+
+5. FUNÇÃO exibirResultados:
+    -ENTRADA: ponteiro para dois jogadores;
+    -SAÍDA: nenhuma;
+    -DESCRIÇÃO: mostra o resultado final, exibindo os nomes dos jogadores e seus respectivos números de vitórias.
+
+6. FUNÇÃO liberarMemoria:
+    -ENTRADA: ponteiro para dois jogadores;
+    -SAÍDA: nenhuma;
+    -DESCRIÇÃO: libera o espaço de memória alocado dinamicamente para cada jogador.
+
+7. FUNÇÃO principal - int main():
+    -Configura o uso de caracteres especiais em português;
+    -Inicializa a semente para os números aleatórios com base no horário atual utilizando srand();
+    -Define e solicita os nomes dos jogadores;
+    -Cria os jogadores dinamicamente utilizando a função criarJogador();
+    -Cria a variável `continuar` de verificação;
+
+    -Implementa um loop para que permite várias rodadas durante o jogo:
+        -cada jogador lança um dado;
+        -os valores são comparados e o vencedor da rodada é determinado;
+        -o jogador decide se quer jogar novamente ou encerrar o jogo.
+
+    -Após o encerramento do loop:
+        -exibe o resultado dos jogadores e o número de vitórias;
+        -libera a memória alocada no computador;
+        -retorna 0, demonstrando que o programa foi executado corretamente.
